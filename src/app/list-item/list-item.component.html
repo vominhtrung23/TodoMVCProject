@@ -1,6 +1,6 @@
 
 <form [formGroup]="profileForm"  style="position: relative;">
-    <label class="toggle-all-label" [ngClass]="{'toggle-all-labelDark': isDarkTheme}" (click)="toggleAll()"></label>
+    <label class="toggle-all-label" [ngClass]="{'toggle-all-labelDark': checkToggleAll}" (click)="toggleAll()"></label>
     <input id="name" type="text" formControlName="taskTitle" placeholder="What needs to be done?" class="new-todo" (keydown)="onKeydown($event)">
  
     <ul formArrayName="itemsTodos">
