@@ -1,0 +1,23 @@
+
+<form [formGroup]="profileForm"  style="position: relative;">
+    <label class="toggle-all-label" [ngClass]="{'toggle-all-labelDark': isDarkTheme}" (click)="toggleAll()"></label>
+    <input id="name" type="text" formControlName="taskTitle" placeholder="What needs to be done?" class="new-todo" (keydown)="onKeydown($event)">
+ 
+    <ul formArrayName="itemsTodos">
+      <li *ngFor="let item of itemsTodos.controls; let index=index" [formGroupName]="index" class="listItem">
+        <input type="checkbox" class="toggle" formControlName="isComplete" (change)="onCheckChange($event.target, index,item)">
+        <label>{{ item.get('taskTitle')?.value }} - {{ item.get('isComplete')?.value }}</label>
+        <label class="destroy" (click)="removeItem(index,item)">x</label>
+      </li>
+    </ul>
+   <div class="pagination">
+      <label>{{originalItems.length}} item left</label>
+      <div style="display: flex;gap:1em">
+      <label (click)="all()">All</label>
+      <label (click)="active()">Active</label>
+      <label (click)="completed()">Complete</label>
+      </div>
+      <label (click)="clearCompleted()" >Clear Completed</label>
+   </div>
+
+  </form>

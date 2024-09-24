@@ -1,0 +1,25 @@
+
+<main class="main">
+  <div class="content">
+    <div class="" style="min-width: 30%;">
+      <h1>Todos</h1>
+      <app-list-item></app-list-item>
+        
+      
+    </div>
+  
+  </div>
+</main>
+
+<router-outlet />
+
+
+   <!-- <ul formArray="itemsTodos">
+          @for (item of itemsTodos;track item.taskTitle;let index = $index) {
+          <li class="listItem" >
+            <input type="checkbox" class="toggle" formControlName="isComplete" (change)="onCheckChange($event.target,index)" >
+            <label >{{ item.taskTitle }} - {{ item.isComplete}}</label>
+            <label class="destroy" (click)="removeItem(index)">x</label>
+          </li>
+        }
+        </ul> -->

@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+ background: #f5f5f5;
+}
+.main {
+    text-align: center;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+.new-todo {
+    padding: 16px 16px 16px 60px;
+    
+    font-size: 25px;
+    border: none;
+    background: rgba(0, 0, 0, .003);
+    box-shadow: inset 0 -2px 1px #00000008;
+    background: white;
+    width: 100%;
+    margin-bottom: 1.5px;
+}
+
+.new-todo:focus {
+    box-shadow: 0 0 2px 2px #cf7d7d;
+    outline: 0;
+}
+
+h1 {
+
+
+    width: 100%;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    color: #b83f45;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+}
+.toggle-all-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 65px;
+    font-size: 0;
+    position: absolute;
+    top: 0px;
+    left: 8px;
+}
+.toggle-all-label:before {
+    content: "\276f";
+    display: inline-block;
+    font-size: 22px;
+    color: #949494;
+    padding: 10px 27px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.toggle-all-labelDark:before {
+    color: #484848;
+   
+}
+ .destroy {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    font-size: 20px;
+    color: #949494;
+    transition: color .2s ease-out;
+    border: none;
+    background: white;
+     display: none;
+     cursor: pointer;
+ }
+ li:hover .destroy{
+    display: block !important;
+ }
+ .listItem{
+    position: relative !important;
+    width: 100%;
+    background: white;
+    padding: 16px 16px 16px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+ }
+ ul{
+    padding: 0px;
+    margin: 0;
+
+ }
+ .toggle {
+    position: absolute;
+    left: 22px;
+}
+
+.pagination{  
+    display: flex;
+    justify-content: space-between;
+    width: 105%;
+    background: white;
+    padding: 20px 20px 20px 28px;
+}
